@@ -186,3 +186,86 @@ body{
 html, body {
   overflow-x: auto;
 }
+
+@media (max-width: 767px) {
+  .sx .imgc {
+    max-width: 90vw;
+    height: 200px;
+    margin-top: 20px;
+  }
+  .ff .imgff {
+    max-width: 90vw;
+    height: 200px;
+    margin-top: 20px;
+  }
+  .cf .imgcf {
+    max-width: 90vw;
+    height: 200px;
+    margin-top: 20px;
+  }
+  .last .imglast {
+    max-width: 90vw;
+    height: 200px;
+    margin-top: 20px;
+  }
+  .anot {
+    width: 90vw;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+  .anot .buttons .fm,
+  .anot .buttons .conf,
+  .anot .buttons .flv,
+  .anot .buttons .fft {
+    font-size: 18px;
+    padding: 8px 12px;
+  }
+  .sx .p,
+  .cf .p,
+  .ff .p,
+  .last .p {
+    font-size: 0.9rem;
+    margin: 10px;
+  }
+  .inputs input {
+    height: 45px;
+    width: 45px;
+    font-size: 18px;
+    margin: 3px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .sx .imgc {
+    max-width: 600px;
+    height: 300px;
+  }
+  .ff .imgff {
+    max-width: 1200px;
+    height: 300px;
+  }
+  .cf .imgcf {
+    max-width: 500px;
+    height: 300px;
+  }
+  .last .imglast {
+    max-width: 600px;
+    height: 300px;
+  }
+  .anot .buttons .fm,
+  .anot .buttons .conf,
+  .anot .buttons .flv,
+  .anot .buttons .fft {
+    font-size: 20px;
+    padding: 10px 14px;
+  }
+  .sx .p,
+  .cf .p,
+  .ff .p,
+  .last .p {
+    font-size: 1rem;
+    margin: 15px;
+  }
+}
