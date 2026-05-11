@@ -1,52 +1,83 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 body{
   display: flex;
-  padding: 0 10px;
+  padding: 20px;
   min-height: 100vh;
   align-items: center;
   justify-content: center;
   background: #FFCCE1;
+  flex-direction: column;
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 .wrapper{
-  width: 430px;
+  width: 100%;
+  max-width: 430px;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
+
 .wrapper h1{
   font-size: 25px;
   font-weight: 500;
   padding: 20px 25px;
   border-bottom: 1px solid #ccc;
 }
+
 .wrapper .content{
-  margin: 25px 25px 35px;
+  margin: 25px;
 }
+
 .imgs {
   background: #FFCCE1;
 }
 
-.anot {
+.anot,
+.sx,
+.fl,
+.last,
+.cf,
+.ff {
+  width: 100%;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.anot {
   justify-content: space-between;
   border: 2px solid #FF6666;
-  border-radius: 10px;
-  width: 700px;
-  height: 450px;
-  padding: 20px;
+  background: white;
 }
 
 .loopy .p {
   font-weight: bold;
   font-size: 20px;
-  margin-left: 35px;
+  margin-left: 20px;
 }
 
 .anot .buttons {
@@ -54,7 +85,6 @@ body{
   flex-direction: column;
   align-items: flex-start;
   gap: 20px;
-  margin-right: 20px;
 }
 
 .anot .buttons .fm,
@@ -64,12 +94,11 @@ body{
   border: 2px solid #FF6666;
   border-radius: 10px;
   background-color: #FF9999;
-  padding: 5px 10px;
+  padding: 10px 20px;
   font-size: 24px;
-  margin-top: 18px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -78,116 +107,44 @@ body{
 .fl,
 .last {
   border: 2px solid #FF9999;
-  border-radius: 10px;
-  width: 1300px;
-  height: 800px;
-  display: flex;
-  gap: 50px;
   justify-content: space-between;
 }
 
 .cf,
 .ff {
   border: 2px solid #FF9999;
-  border-radius: 10px;
-  width: 1300px;
-  height: 800px;
-  display: flex;
-  gap: 50px;
+  justify-content: space-between;
 }
 
-.sx .imgc {
-  width: 1730px;
-  height: 500px;
+.sx .imgc,
+.ff .imgff,
+.cf .imgcf,
+.last .imglast {
+  width: 100%;
+  max-width: 600px;
   border: 4px solid #FF9999;
-  justify-content: center;
-  margin-top: 130px;
   overflow: hidden;
-  margin-left: 50px;
-  border-radius: 20px;
-}
-.ff .imgff {
-  width: 3600px;
-  height: 500px;
-  border: 4px solid #FF9999;
-  justify-content: center;
-  margin-top: 130px;
-  overflow: hidden;
-  margin-left: 50px;
   border-radius: 20px;
 }
 
 .last .imglast {
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
-  margin-top: 30px;
-  margin-left: 50px;
+  border: none;
 }
 
-.last .p {
-  text-decoration: underline;
-  color: #4A1F1F;
-  text-decoration-color: #C94F4F;
-  font-size: large;
-  font-weight: 550;
-  margin-top: 40px;
-  margin-left: 10px;
-  margin-right: 50px;
-}
-
-.last .lp {
-  text-decoration: underline;
-  color: #4A1F1F;
-  text-decoration-color: #C94F4F;
-  font-size: large;
-  font-weight: 550;
-  margin-top: 40px;
-  margin-left: 20px;
-  margin-bottom: 50px;
-}
-
-.cf .imgcf {
-  width: 1400px;
-  height: 500px;
-  border: 4px solid #FF9999;
-  justify-content: center;
-  margin-top: 130px;
-  overflow: hidden;
-  margin-right: 50px;
-  border-radius: 20px;
-}
-
-.sx .p {
-  text-align: justify;
-  text-decoration: underline;
-  text-decoration-color: #C94F4F;
-  font-weight: 550;
-  font-size: large;
-  margin-top: 135px;
-  margin-left: 20px;
-  margin-right: 50px;
-}
-
-.cf .p {
-  text-align: justify;
-  text-decoration: underline;
-  text-decoration-color: #C94F4F;
-  font-weight: 550;
-  font-size: large;
-  margin-top: 90px;
-  margin-left: 40px;
-  margin-right: 20px;
-}
+.last .p,
+.last .lp,
+.sx .p,
+.cf .p,
 .ff .p {
+  flex: 1;
+  text-align: justify;
   text-decoration: underline;
   text-decoration-color: #C94F4F;
-  font-weight: 550;
+  color: #4A1F1F;
   font-size: large;
-  margin-top: 170px;
-  margin-left: 50px;
-  margin-right: 40px;
-  text-align: justify;
+  font-weight: 550;
+  margin: 0;
+  padding: 10px;
 }
 
 .popup-box {
@@ -197,14 +154,13 @@ body{
   width: 100%;
   height: 100%;
   background: rgba(0,0,0,0.6);
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   opacity: 0;
   pointer-events: none;
   transition: 0.3s ease;
+  padding: 20px;
 }
 
 .popup-box.show {
@@ -220,6 +176,8 @@ body{
   box-shadow: 0 10px 30px rgba(0,0,0,0.3);
   transform: scale(0.8);
   transition: 0.3s ease;
+  width: 100%;
+  max-width: 500px;
 }
 
 .popup-box.show .popup-content {
@@ -229,10 +187,11 @@ body{
 .popup-box .play-next-btn {
   border-radius: 10px;
   background-color: #FF6666;
-  padding: 5px 10px;
+  padding: 10px;
   font-size: 24px;
-  width: 200px;
-  margin-top: 30px;
+  width: 100%;
+  max-width: 200px;
+  margin: 30px auto 0;
   display: flex;
   text-align: center;
   align-items: center;
@@ -246,7 +205,8 @@ body{
   border-radius: 10px;
   font-weight: bold;
   overflow: hidden;
-  width: 275px;
+  width: 100%;
+  max-width: 275px;
   margin-top: 20px;
   height: 60px;
   border: 2px solid #FF6666;
@@ -278,7 +238,7 @@ body{
   width: 100%;
   display: inline-block;
   text-align: center;
-  line-height: 40px;
+  line-height: 60px;
 }
 
 .content .inputs{
@@ -286,6 +246,7 @@ body{
   flex-wrap: wrap;
   justify-content: center;
 }
+
 .inputs input{
   height: 57px;
   width: 56px;
@@ -300,66 +261,32 @@ body{
   text-transform: uppercase;
   border: 1px solid #B5B5B5;
 }
+
 .typing-input {
   opacity: 0;
   z-index: -999;
   position: absolute;
   pointer-events: none;
 }
+
 .inputs input:first-child{
   margin-left: 0px;
 }
+
 .content .details{
   margin: 20px 0 25px;
 }
+
 .details p{
   font-size: 19px;
   margin-bottom: 10px;
 }
 
-
-
-html, body {
-  overflow-x: hidden;
-}
-
-.anot,
-.sx,
-.fl,
-.last,
-.cf,
-.ff {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media screen and (max-width: 1400px) {
-
-  .sx,
-  .fl,
-  .last,
-  .cf,
-  .ff {
-    width: 95%;
-    height: auto;
-  }
-
-  .anot {
-    width: 95%;
-    height: auto;
-  }
-
-  .sx .imgc,
-  .fl .imgfl,
-  .cf .imgcf,
-  .ff .imgff,
-  .last .imglast {
-    width: 45%;
-    height: auto;
-  }
-}
-
 @media screen and (max-width: 768px) {
+
+  body {
+    padding: 10px;
+  }
 
   .sx,
   .fl,
@@ -369,32 +296,52 @@ html, body {
   .anot {
     flex-direction: column;
     align-items: center;
-    height: auto;
-    padding: 20px;
+    width: 100%;
+    padding: 15px;
+    gap: 20px;
   }
 
   .sx .imgc,
-  .fl .imgfl,
-  .cf .imgcf,
   .ff .imgff,
+  .cf .imgcf,
   .last .imglast {
     width: 100%;
-    margin: 0;
-    padding: 20px;
+    max-width: 100%;
   }
 
   .sx .p,
-  .fl .p,
   .cf .p,
   .ff .p,
-  .last .p {
-    margin: 20px 0;
-    padding: 20px;
+  .last .p,
+  .last .lp {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
   }
 
   .anot .buttons {
     width: 100%;
-    align-items: center;
-    margin-right: 0;
+    align-items: stretch;
+  }
+
+  .anot .buttons .fm,
+  .anot .buttons .conf,
+  .anot .buttons .flv,
+  .anot .buttons .fft,
+  .popup-box .play-next-btn,
+  #progressBtn {
+    width: 100%;
+    max-width: 100%;
+    font-size: 18px;
+  }
+
+  .wrapper h1 {
+    font-size: 22px;
+  }
+
+  .inputs input {
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
   }
 }
