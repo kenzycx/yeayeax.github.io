@@ -11,8 +11,6 @@ const popupText = document.querySelector(".popup-content h2");
 
 const errorAud = new Audio("sounds/laugh.mp3");
 errorAud.preload = "auto";
-const successAud = new Audio("sounds/wahoo.mp3");
-successAud.preload = "auto";
 const yesAud = new Audio("sounds/minions-ta-yes.mp3");
 yesAud.preload = "auto";
 const byeAud = new Audio("sounds/bye-bye.mp3");
@@ -20,13 +18,12 @@ byeAud.preload = "auto";
 
 document.addEventListener("click", () => {
     errorAud.load();
-    successAud.load();
     yesAud.load();
     byeAud.load();
 }, { once: true });
 
 let word, maxGuesses, incorrectLetters = [];
-const complimentsMaster = ["Zo pro", "Lupethz", "Yiz galing", "May tama ka, girlypopz"];
+const complimentsMaster = ["zo pro"];
 let complimentsUsed = [];
 
 function getSolvedWords() {
@@ -148,8 +145,6 @@ function initGame(e) {
 
     if (checkWin()) {
         saveSolvedWord(word);
-        successAud.currentTime = 0;
-        successAud.play().catch(() => {});
 
         const solvedWords = getSolvedWords();
         const availableWords = wordList.filter(item => !solvedWords.includes(item.word));
