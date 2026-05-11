@@ -11,14 +11,11 @@ const popupText = document.querySelector(".popup-content h2");
 
 const errorAud = new Audio("sounds/laugh.mp3");
 errorAud.preload = "auto";
-const yesAud = new Audio("sounds/minions-ta-yes.mp3");
-yesAud.preload = "auto";
 const byeAud = new Audio("sounds/bye-bye.mp3");
 byeAud.preload = "auto";
 
 document.addEventListener("click", () => {
     errorAud.load();
-    yesAud.load();
     byeAud.load();
 }, { once: true });
 
@@ -53,8 +50,6 @@ function showPopup(text, buttonText, buttonHandler) {
     popupText.innerText = text;
     playNextBtn.innerText = buttonText;
     playNextBtn.onclick = () => {
-        yesAud.currentTime = 0;
-        yesAud.play().catch(() => {});
         setTimeout(() => hidePopup(), 150);
         sessionStorage.removeItem("solvedWords");
         buttonHandler();
