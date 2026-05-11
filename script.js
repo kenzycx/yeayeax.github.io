@@ -52,6 +52,8 @@ function showPopup(text, buttonText, buttonHandler) {
     playNextBtn.onclick = () => {
         setTimeout(() => hidePopup(), 150);
         sessionStorage.removeItem("solvedWords");
+        complimentsUsed = [];
+        resetGame();
         buttonHandler();
     };
     popupBox.classList.add("show");
@@ -76,6 +78,8 @@ function randomWord() {
 
     if (availableWords.length === 0 && solvedWords.length > 0) {
         showPopup("zo pro", "Next Word", () => {
+            sessionStorage.removeItem("solvedWords");
+            complimentsUsed = [];
             resetGame();
             byeAud.currentTime = 0;
             const playPromise = byeAud.play();
