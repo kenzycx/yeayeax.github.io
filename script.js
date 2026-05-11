@@ -59,6 +59,7 @@ function showPopup(text, buttonText, buttonHandler) {
         yesAud.currentTime = 0;
         yesAud.play().catch(() => {});
         setTimeout(() => hidePopup(), 150);
+        sessionStorage.removeItem("solvedWords");
         buttonHandler();
     };
     popupBox.classList.add("show");
