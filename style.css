@@ -77,16 +77,45 @@ body{
   flex-wrap: wrap;
   margin: auto;
 }
-.sx .imgc,
-.ff .imgff,
-.cf .imgcf,
-.last .imglast {
-  flex: 1 1 45%;
-  max-width: 700px;
+.sx .imgc {
+  width: 1730px;
+  max-width: 90vw;
   height: auto;
+  aspect-ratio: 1730 / 500;
   border: 4px solid #FF9999;
   border-radius: 20px;
   overflow: hidden;
+  margin: 130px auto 0 auto;
+  display: block;
+}
+.ff .imgff {
+  width: 3600px;
+  max-width: 90vw;
+  height: auto;
+  aspect-ratio: 3600 / 500;
+  border: 4px solid #FF9999;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 130px auto 0 auto;
+  display: block;
+}
+.cf .imgcf {
+  width: 1400px;
+  max-width: 90vw;
+  height: auto;
+  aspect-ratio: 1400 / 500;
+  border: 4px solid #FF9999;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 130px auto 0 auto;
+  display: block;
+}
+.last .imglast {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  margin: 30px auto 0 auto;
+  display: block;
 }
 .sx .p,
 .cf .p,
@@ -191,16 +220,17 @@ html, body {
   .cf .imgcf,
   .ff .imgff,
   .last .imglast {
-    width: 90vw;
-    max-width: 100%;
-    margin: 10px 0;
+    width: 95vw;
+    max-width: 95vw;
+    height: auto;
+    margin: 50px auto 0 auto;
   }
   .sx .p,
   .fl .p,
   .cf .p,
   .ff .p,
   .last .p {
-    width: 90vw;
+    width: 95vw;
     margin: 10px 0;
     text-align: justify;
   }
